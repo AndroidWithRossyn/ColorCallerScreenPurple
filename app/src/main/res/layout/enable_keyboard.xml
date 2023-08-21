@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/main_background"
+        tools:context=".MainActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/menu_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:padding="15dp"
+                    android:src="@drawable/backbtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/menu_btn"
+                    android:gravity="center_vertical"
+                    android:text="Permission Needed"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/im_title"
+            android:layout_width="130dp"
+            android:scaleType="fitXY"
+            android:layout_height="120dp"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/keyboard_perm" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleKeyboardTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/im_title"
+            android:text="Enable Neon Keyboard"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settingsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@+id/titleKeyboardTv"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/pleaseCheckSettings"
+            android:textAppearance="@style/pleaseCheckSettingsStyle"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enableKeyboardBtn"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/settingsTv"
+            android:background="@drawable/main_button"
+            app:backgroundTint="@null"
+            android:text="Enable Keyboard"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:textColor="@color/white" />
+
+
+
+    </RelativeLayout>
+</layout>
